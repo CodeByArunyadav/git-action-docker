@@ -35,7 +35,7 @@ jobs:
           image: codebyarunyadav/springboot_githubaction_demo
           tags: 'latest'
           registry: docker.io
-          dockerfile: Dockerfile
+          dockerfile: demo-git_action-docker/Dockerfile
           username: '${{ secrets.DOCKER_USERNAME }}'
           password: '${{ secrets.DOCKER_PASSWORD }}'
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
