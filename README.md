@@ -83,13 +83,13 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
-### **Build Docker Image**
+ 
+### **Run Container**
+
+login to the local docker machine and pull the docker image and run
 
 ```bash
-docker build -t springboot-demo .
-```
-
-### **Run Container**
+docker pull codebyarunyadav/springboot_githubaction_demo:master-b8ac0c3
 
 ```bash
 docker run -p 8080:8080 springboot-demo
