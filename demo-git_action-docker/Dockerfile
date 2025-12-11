@@ -1,7 +1,5 @@
-FROM openjdk:8
-
-COPY target/springboot_githubaction_demo.jar springboot_githubaction_demo.jar
-
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY target/springboot_githubaction_demo.jar app.jar
 EXPOSE 8080
-
-ENTRYPOINT ["java", "-jar", "/springboot_githubaction_demo.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
