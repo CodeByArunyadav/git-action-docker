@@ -35,11 +35,30 @@ git-action-docker/
 
 ---
 
-## 🚧 Build the JAR Locally
+## 🚧 Build the JAR using git Maven Repository
 
 ```bash
-cd demo-git_action-docker
-mvn clean package -DskipTests
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: temurin
+          cache: maven
+      - name: Build with Maven
+        run: mvn clean install  
+        working-directory: demo-git_action-docker
 ```
 
 This generates:
