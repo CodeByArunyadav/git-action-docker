@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:17
 WORKDIR /app
 
 COPY target/springboot_githubaction_demo.jar springboot_githubaction_demo.jar
