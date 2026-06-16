@@ -83,6 +83,7 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 
+<<<<<<< HEAD
 ## a MANUAL approach 
 Build Docker Image
 docker build -t springboot-demo .
@@ -91,6 +92,8 @@ Run Container
 docker run -p 8080:8080 springboot-demo
 
 ---
+=======
+>>>>>>> refs/remotes/origin/master
 
 ## 🔄 GitHub Actions CI/CD Pipeline
 

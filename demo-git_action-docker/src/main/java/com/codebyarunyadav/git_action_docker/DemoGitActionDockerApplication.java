@@ -9,6 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 		"com.codebyarunyadav.git_action_docker",
 		"com.codebyarunyadav.git_action_docker.controller"
 })
+
 public class DemoGitActionDockerApplication {
 
 	public static void main(String[] args) {
